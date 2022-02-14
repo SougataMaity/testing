@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>3rd html</title>
+</head>
+<body>
+    <h3>House Price Prediction of Boston data</h2>
+    <img src="{{ url_for('static', filename = 'pic.jpg') }}" alt="">
+
+    <div class="main">
+        <form action="{{url_for('pred')}}" method="post">
+            <h2>Linear Regression prediction</h2>
+            <label for="v1">RM</label>
+            <input id="v1" name="v1" type="number" required = 'required'><br></br>
+
+            <label for="v2">LSTAT</label>
+            <input id="v2" name="v2" type="number" required = 'required'><br></br>
+            <button style="left: 50%;">Predict</button>
+            <br>
+            <h3>RM : Average Number of Rooms per Dwelling</h3>
+            <h3>LSTAT : Percentage of Lower status of the population</h3>
+            {{price_prediction}}
+
+        </form>
+        
+        
+    </div>
+    
+    <style>
+        img{
+            height: 96%;
+            width: 100%;
+            position: absolute;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        form{
+            background: rgba(87, 86, 80,0.4);
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            display: block;
+            box-shadow: 0 15px 20px rgba(248, 244, 244, 0.2);
+            padding: 20px;
+            display: inline-block;
+        
+        }
+        label{
+            color: red;
+            width: 100px;
+            padding: 5px;
+            margin: 3px;
+        
+        }
+        h2{
+            font-family: sans-serif;
+            margin-bottom: 30px;
+            color: white;
+            text-align: center;
+
+        }
+        input{
+            
+            display: inline-block;
+            padding: 6px;
+            margin-right: 40px;
+        }
+        form h3{
+            margin-left: 30px;
+            padding: 3px;
+            text-align: center;
+            color: hotpink;
+        }
+    </style>
+    </div>
+</body>
+</html>

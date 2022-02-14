@@ -1,0 +1,14 @@
+body{
+    background: pink;
+    color: purple;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#outer{
+    width: 280px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}

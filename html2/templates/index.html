@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Demo</title>
+    <!---<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'base.css')}}">--->
+
+</head>
+<body>
+    <div class="outer">
+        <h3>Linear Regression Prediction</h3>
+        <div class = 'inner'>
+            <form action="{{url_for('pred')}}" method="post">
+                <label for="v1">variable-1</label>
+                <input id ='v1' type="number" name="v1"> <br></br>
+
+                <label for="v2">variable-2</label>
+                <input id ='v2' type="number" name="v2"> <br></br>
+
+                <label for="v3">variable-3</label>
+                <input id ='v3' type="number" name="v3"> <br></br>
+
+                <label for="v4">variable-4</label>
+                <input id ='v4' type="number" name="v4"> <br></br>
+
+                <button type="submit">Predict</button> <br></br>
+                <br></br>
+            </form>
+            
+        </div>
+        
+
+    </div>
+    <style>
+        body{
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+                background-size: cover;
+                background: violet;
+        }
+        .outer{
+                width: 380px;
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+        }
+        input{
+            display: inline-block;
+            width: 50px;
+            height: 22px;
+        }
+        label{
+            width: 400px;
+            height: 22px;
+            margin-right: 25%;
+            margin-left: 5%;
+        }
+    </style>
+</body>
+</html>
